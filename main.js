@@ -1,7 +1,20 @@
 class Course {
   constructor({ name, classes = [] }) {
-    this.name = name;
+    // vamos a esconder el atributo name poniendo un _ antes del nombre
+    this._name = name;
     this.classes = classes;
+  }
+  // vamos a crear un getter para acceder al atributo name
+  get name() {
+    return this._name;
+  }
+  // si queremos cambiar el nombre debemos crear un setter
+  set name(newName) {
+    if (newName === "Curso Malito de Programación Básica") {
+      console.error("Web... no");
+    } else {
+      this._name = newName;
+    }
   }
 }
 const cursoProgBasica = new Course({
