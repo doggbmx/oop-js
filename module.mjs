@@ -1,4 +1,4 @@
-import { PlatziClass } from "./main.mjs";
+import { PlatziClass } from "./main.js";
 
 const clase67 = new PlatziClass({
   name: "Clase 67 - Clases en JavaScript",
